@@ -1,0 +1,58 @@
+#apartments {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin: 5rem auto;
+    color: white;
+
+}
+
+#apartments div.wrapper {
+    width: 80%;
+    height: auto;
+    padding: 2rem;
+    margin: 4rem auto;
+    background-image: url("../images/wood-floor.jpg");
+    background-position: bottom;
+    background-size: contain;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#apartments h2{
+    margin: 1rem 0;
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+#apartments p {
+    width: 100%;
+    margin: 4rem 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    word-spacing: 2px;
+    line-height: 4rem;
+    text-align: justify;
+}
+
+#apartments div.flex-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+#apartments div.item {
+   flex-basis: 40%;
+}
+
+#apartments div.item p {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#apartments i {
+    font-size: 3rem;
+    color: white;
+}
