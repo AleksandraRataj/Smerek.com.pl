@@ -15,10 +15,10 @@ header {
     width: 100%;
     background-image: url("../images/needles.jpg");
     background-position: top;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
-    box-shadow: 5px 5px #333;
 }
+
 header nav {
     position: fixed;
     top: 0;
