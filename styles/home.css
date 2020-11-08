@@ -1,0 +1,39 @@
+#home {
+    width: 80%;
+    height: auto;
+    padding: 2rem;
+    margin: 5rem auto;
+}
+
+#home h2{
+    margin: 1rem 0;
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+#home div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#home p {
+    width: 50%;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    word-spacing: 2px;
+    line-height: 4rem;
+}
+
+#home div.image {
+    height: 300px;
+    width: 40%;
+    background-image: url("../images/domek.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+#home img {
+    height: 300px;
+    width: auto;
+}
