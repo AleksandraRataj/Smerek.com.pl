@@ -2,57 +2,86 @@
     width: 100%;
     height: auto;
     padding: 2rem;
-    margin: 5rem auto;
-    color: white;
-
+    margin: 1rem auto;
 }
 
 #apartments div.wrapper {
     width: 80%;
     height: auto;
-    padding: 2rem;
-    margin: 4rem auto;
-    background-image: url("../images/wood-floor.jpg");
-    background-position: bottom;
-    background-size: contain;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
 }
 
-#apartments h2{
+#apartments h2 {
     margin: 1rem 0;
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-style: italic;
     letter-spacing: 2px;
 }
 
 #apartments p {
     width: 100%;
-    margin: 4rem 0;
-    font-size: 1.8rem;
-    font-weight: 500;
-    word-spacing: 2px;
-    line-height: 4rem;
-    text-align: justify;
+    margin: 3rem 0;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
 }
 
-#apartments div.flex-wrapper{
+#apartments div.flex-wrapper {
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: stretch;
+    align-items: center;
+    background-image: url("../images/wood-floor.jpg");
+    background-position: top;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#apartments div.item {
-   flex-basis: 40%;
+#apartments div.artifact {
+    margin-top: 2rem;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#apartments div.item p {
-    font-size: 1.8rem;
+#apartments div.artifact p {
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
     text-align: center;
 }
 
 #apartments i {
-    font-size: 3rem;
+    display: block;
     color: white;
+    font-size: 4rem;
+}
+
+@media all and (min-width: 768px) {
+    #apartments div.flex-wrapper {
+        flex-direction: row;
+    }
+
+    #apartments div.artifact {
+        flex-basis: 40%;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    #apartments h2 {
+        font-size: 3rem;
+    }
+
+    #apartments p {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+
+    #apartments div.artifact p {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
 }
