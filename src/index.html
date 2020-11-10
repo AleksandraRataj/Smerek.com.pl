@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--    <meta name="description" content="">-->
+    <meta name="description" content="Dwupokojowe apartamenty z łazienkami położone w malowniczym Beskidzie Niskim.">
     <meta name="keywords"
           content="smerek, rymanów zdrój, apartamenty, agroturystyka, beskid niski, pokoje gościnne, kwatery, uzdrowisko, smerecki">
     <meta name="author" content="Aleksandra Rataj aleksandrarataj2@gmail.com">
@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/apartments.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
+    <link rel="stylesheet" href="../styles/area.css">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 </head>
 <body>
 <header>
@@ -51,7 +55,9 @@
         <div>
             <p>Smerek to odrestaurowany, drewniany dom z 1912 roku, kameralnie usytuaowany w uzdrowiskowej miejscowości
                 Rymanów-Zdrój, położonej w Beskidzie Niskim, w województwie podkarpackim, 18km na południe od Krosna.
-                Domek składa się z trzech dwupokojowych apartamentów z łazienkami. Otoczenie domu stanowi 7 arowa, ogrodzona działka, całkowicie oddana do dyspozycji gości - właściciele mieszkają w oddzielnym budynku.</p>
+                Domek składa się z trzech dwupokojowych apartamentów z łazienkami. Otoczenie domu stanowi 7 arowa,
+                ogrodzona działka, całkowicie oddana do dyspozycji gości - właściciele mieszkają w oddzielnym
+                budynku.</p>
             <div class="image"></div>
             <!--            <img src="../images/domek.jpg" alt="domek">-->
         </div>
@@ -83,7 +89,8 @@
             </div>
             <div class="artifact">
                 <i class="fas fa-utensils"></i>
-                <p>Na wyposażenie kuchenne składają sie: lodówka, kuchenka elektryczna, czajnik, sztućce, talerze oraz garnki.</p>
+                <p>Na wyposażenie kuchenne składają sie: lodówka, kuchenka elektryczna, czajnik, sztućce, talerze oraz
+                    garnki.</p>
             </div>
             <div class="artifact">
                 <i class="fas fa-shower"></i>
@@ -108,14 +115,74 @@
         </div>
     </section>
 
-    <section id="gallery"></section>
-    <section id="area"></section>
+    <section id="gallery">
+        <h2>galeria</h2>
+    </section>
+
+
+    <section id="area">
+        <h2>okolica - Rymanów-Zdrój</h2>
+        <p>Znakomite miejsce do wypoczynku dla rodziców z małymi dziećmi, szczególnie zagrożonymi alergiami i chorobami
+            układu oddechowego. Tutejszy mikroklimat już od ponad 150 lat jest z powodzeniem wykorzystywany jako ważny i
+            skutczny czynnik leczniczy tych chorób. Przepiękne okolice uzdrowiska, położonego w Beskidzie Niskim, mogą
+            być terenem wypraw pieszych, konnych, rowerowych, wędkarskich i łowieckich (bezkrwawych z aparatem
+            fotograficznym).</p>
+    </section>
+
+
     <section id="contact">
+        <h2>kontakt</h2>
+        <div class="flex-wrapper">
+            <div class="contact">
+                <h3>Adres pensjonatu:</h3>
+                <p>Smerek<br>ul. Ogrodowa 7<br> 38-481 Rymanów-Zdrów</p>
+                <h3>Adres właściciela:</h3>
+                <p>Agata Smerecka<br> ul. Ogrodowa 23<br>38-481 Rymanów-Zdrów</p>
+                <h3>Telefon kontaktowy:</h3>
+                <p>(+48) 605 357 425</p>
+                <h3>Adres mailowy:</h3>
+                <p>aksmerecki@op.pl</p>
+            </div>
+
+            <div class="container">
+                <div class="header">
+                    <h3>Masz pytanie? Napisz do nas!</h3>
+                </div>
+                <form action="https://formspree.io/f/mwkwbgda" method="POST" class="contact-form">
+                    <div class="form-control">
+                        <label>
+                            Imię i nazwisko:
+                            <input type="text" name="surname" placeholder="Jan Kowalski" required>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <label>
+                            Adres email:
+                            <input type="text" name="_replyto" placeholder="hello@gmail.com" required>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <label>
+                            Twoja wiadomość:
+                            <textarea name="message" cols="30" rows="5" placeholder="Tutaj wpisz swoją wiadomość."
+                                      required></textarea>
+                        </label>
+                    </div>
+                    <button type="submit">Wyślij</button>
+                </form>
+            </div>
+        </div>
     </section>
 </main>
 
 <footer>
+    <img src="../images/logo.png" alt="" class="logo">
+    <p>&copy Copyright 2020 Agata Smerecka</p>
+    <a href="https://www.facebook.com/Smerek-Dwupokojowe-apartamenty-w-Rymanowie-Zdroju-354392598029642"><i
+            class="fab fa-facebook-square"></i></a>
 </footer>
+
+
 <script src="../script/app.js"></script>
 </body>
 </html>
