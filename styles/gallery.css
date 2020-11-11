@@ -1,0 +1,206 @@
+#gallery {
+    height: auto;
+    width: 80%;
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+#gallery h2 {
+    margin: 1rem 0;
+    font-size: 2.6rem;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+#gallery h3 {
+    margin: 2.5rem 0;
+    font-size: 2.2rem;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+#gallery div.apartments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas:
+    "gallery-h3-apartments gallery-h3-apartments gallery-h3-apartments"
+    "img1 img2 img3"
+    "img4 img5 img6";
+}
+
+#gallery div.apartments .gallery-img {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+#gallery div.apartments h3 {
+    grid-area: gallery-h3-apartments;
+}
+
+#gallery div.apartments .img1 {
+    grid-area: img1;
+    background-image: url("../images/gallery/thumbs/img1.jpg");
+}
+
+#gallery div.apartments .img2 {
+    grid-area: img2;
+    background-image: url("../images/gallery/thumbs/img2.jpg");
+}
+
+#gallery div.apartments .img3 {
+    grid-area: img3;
+    background-image: url("../images/gallery/thumbs/img3.jpg");
+}
+
+#gallery div.apartments .img4 {
+    grid-area: img4;
+    background-image: url("../images/gallery/thumbs/img4.jpg");
+}
+
+#gallery div.apartments .img5 {
+    grid-area: img5;
+    background-image: url("../images/gallery/thumbs/img5.jpg");
+}
+
+#gallery div.apartments .img6 {
+    grid-area: img6;
+    background-image: url("../images/gallery/thumbs/img6.jpg");
+}
+
+#gallery div.other {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas:
+    "gallery-h3-other gallery-h3-other gallery-h3-other"
+    "img7 img8 img9"
+    "img10 img11 img12";
+}
+
+#gallery div.other .gallery-img {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+#gallery div.other h3 {
+    grid-area: gallery-h3-other;
+}
+
+#gallery div.other .img7 {
+    grid-area: img7;
+    background-image: url("../images/gallery/thumbs/img7.jpg");
+}
+
+#gallery div.other .img8 {
+    grid-area: img8;
+    background-image: url("../images/gallery/thumbs/img8.jpg");
+}
+
+#gallery div.other .img9 {
+    grid-area: img9;
+    background-image: url("../images/gallery/thumbs/img9.jpg");
+}
+
+#gallery div.other .img10 {
+    grid-area: img10;
+    background-image: url("../images/gallery/thumbs/img10.jpg");
+}
+
+#gallery div.other .img11 {
+    grid-area: img11;
+    background-image: url("../images/gallery/thumbs/img11.jpg");
+}
+
+#gallery div.other .img12 {
+    grid-area: img12;
+    background-image: url("../images/gallery/thumbs/img12.jpg");
+}
+
+/* GALLERY IMAGE TITLES */
+
+#gallery div.gallery-img div {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+}
+
+#gallery div.gallery-img a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#gallery div.gallery-img div:hover {
+    opacity: 0.6;
+}
+
+div.img-window {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+div.img-window img{
+    max-height: 80vh;
+    max-width: 80vw;
+}
+
+.img-btn-next {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #111111;
+    position: fixed;
+    top: 48vh;
+    z-index: 200;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.img-btn-next:hover {
+opacity: 0.8;
+}
+
+.img-btn-prev{
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #111111;
+    position: fixed;
+    top: 48vh;
+    z-index: 200;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.img-btn-prev:hover {
+    opacity: 0.8;
+}
