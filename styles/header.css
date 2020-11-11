@@ -34,8 +34,8 @@ header nav {
 header .menu {
     padding: 5px 20px;
     height: 70px;
-    background-image: url("../images/wood-floor.jpg");
-    background-position: top;
+    background-image: url("../images/nav.png");
+    background-position: center;
     background-size: inherit;
 }
 
@@ -47,6 +47,12 @@ header nav ul li a {
     display: block;
     color: #ffffff;
     text-decoration: none;
+    border: 2px solid transparent;
+    transition: .3s linear;
+}
+
+header nav ul li a:hover {
+  border-bottom: 2px solid white;
 }
 
 header .menu li {
