@@ -3,7 +3,7 @@ const menu = document.querySelector(".menu");
 const iconBurger = document.querySelectorAll(".fas");
 const items = document.querySelectorAll(".item");
 
-burger.addEventListener("click", () => {
+const burgerFun = () => {
     menu.classList.toggle("active");
     iconBurger.forEach((icon) => {
         icon.classList.toggle("show");
@@ -11,11 +11,22 @@ burger.addEventListener("click", () => {
     items.forEach((item) => {
         item.classList.toggle("active");
     })
-});
+}
+
+burger.addEventListener("click", burgerFun);
+
+$('nav a').on('click', function (){
+    const section = '#' + $(this).attr('class');
+    $('body, html').animate({
+        scrollTop: $(section).offset().top - 70
+    })
+    if(menu.classList.contains('active')){
+        burgerFun();
+    }
+})
 
 let galleryImages = document.querySelectorAll('.gallery-img');
 let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
 
 if (galleryImages) {
     galleryImages.forEach(function (image, index) {
@@ -38,16 +49,12 @@ if (galleryImages) {
             newImg.setAttribute('id', 'current-img');
 
             newImg.onload = function () {
-                let imgWidth = this.width;
-                let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 100;
-
                 let newPrevBtn = document.createElement('a');
                 let btnPrevText = document.createTextNode('Poprzednie');
                 newPrevBtn.appendChild(btnPrevText);
                 container.appendChild(newPrevBtn);
                 newPrevBtn.setAttribute('class', 'img-btn-prev');
                 newPrevBtn.setAttribute('onclick', 'changeImg(0)');
-                newPrevBtn.style.cssText = `left: ${calcImgToEdge}px;`;
 
                 let newNextBtn = document.createElement('a');
                 let btnNextText = document.createTextNode('Następne');
@@ -55,7 +62,6 @@ if (galleryImages) {
                 container.appendChild(newNextBtn);
                 newNextBtn.setAttribute('class', 'img-btn-next');
                 newNextBtn.setAttribute('onclick', 'changeImg(1)');
-                newNextBtn.style.cssText = `right: ${calcImgToEdge}px;`;
             }
         }
     });
@@ -87,12 +93,6 @@ function changeImg(changeDir) {
     newImg.setAttribute('src', `../images//gallery/img${calcNewImg}.jpg`);
     newImg.setAttribute('id', 'current-img');
     getLatestOpenedImg = calcNewImg;
-    newImg.onload = function () {
-        let imgWidth = this.width;
-        let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 100;
-        let nextBtn = document.querySelector('.img-btn-next');
-        nextBtn.style.cssText = `right: ${calcImgToEdge}px;`;
-        let prevBtn = document.querySelector('.img-btn-prev');
-        prevBtn.style.cssText = `left: ${calcImgToEdge}px;`;
-    }
 }
+
+
