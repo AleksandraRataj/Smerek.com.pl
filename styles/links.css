@@ -1,0 +1,56 @@
+#links {
+    width: 80%;
+    height: auto;
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+#links h2 {
+    margin: 1rem 0;
+    margin-bottom: 3rem;
+    font-size: 2.6rem;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+#links ul {
+    overflow-x: visible;
+    list-style: disc;
+    margin-top: 1rem;
+
+}
+
+#links ul li {
+    overflow-x: visible;
+    display: list-item;
+    margin-left: 2rem;
+}
+
+#links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    transition: 0.3s;
+}
+
+#links ul li a:hover {
+    color: forestgreen;
+}
+
+@media all and (min-width: 768px) {
+    #links ul li a{
+        font-size: 1.4rem;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    #links h2 {
+        font-size: 3rem;
+    }
+    #links ul li a {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+}
