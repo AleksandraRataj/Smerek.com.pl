@@ -47,9 +47,63 @@
     align-items: center;
 }
 
+#area a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: .2s;
+}
+
+#area a:hover {
+    color: forestgreen;
+}
+
+
+#area div.photo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 3rem auto;
+    background-image: url("../images/IMG_0589.JPG");
+    background-size: cover;
+    background-position: bottom;
+}
+
+#area div.photo:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 10;
+
+}
+
+#area div.photo p {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    align-self: center;
+    z-index: 50;
+}
+
+
 @media all and (min-width: 768px) {
     #area p {
         font-size: 1.4rem;
+    }
+
+    #area div.photo p {
+        font-size: 2rem;
     }
 }
 
@@ -73,5 +127,9 @@
     #area p {
         font-size: 1.8rem;
         line-height: 3rem;
+    }
+
+    #area div.photo p {
+        font-size: 2.4rem;
     }
 }
